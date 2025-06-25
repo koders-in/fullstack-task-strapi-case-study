@@ -16,8 +16,8 @@ The layout should **exactly match the attached screenshots**.
 All content (titles, descriptions, images, categories, tags, etc.) should be managed dynamically via Strapi and rendered through API calls on the frontend.
 
 🖼️ **Design Reference:** See the attached screenshots:
-- `Case Studies - Home.png`
-- `Case Studies - Read.png`
+- ![Case Studies Preview](./Case Studies - Home.png)
+- ![Case Studies Details](./Case Studies - Read.png)
 
 ---
 
