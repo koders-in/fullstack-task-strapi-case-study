@@ -1,0 +1,59 @@
+{
+  "kind": "collectionType",
+  "collectionName": "companies",
+  "info": {
+    "singularName": "company",
+    "pluralName": "companies",
+    "displayName": "Company"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "about": {
+      "type": "richtext"
+    },
+    "company_size": {
+      "type": "string"
+    },
+    "industry": {
+      "type": "string"
+    },
+    "headquarters": {
+      "type": "string"
+    },
+    "founded": {
+      "type": "date"
+    },
+    "key_features": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::key-feature.key-feature"
+    },
+    "use_cases": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::use-case.use-case"
+    },
+    "case_studies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case-study.case-study",
+      "mappedBy": "company"
+    },
+    "logo": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}

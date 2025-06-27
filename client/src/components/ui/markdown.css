@@ -1,0 +1,53 @@
+/* src/reset.css */
+.reset-tailwind * {
+  all: revert;
+  box-sizing: border-box;
+}
+
+.reset-tailwind {
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  font-size: 16px;
+  color: #1a1a1a;
+}
+
+.reset-tailwind h1 {
+  font-size: 1.5rem;
+  margin: 1.25rem 0 0.75rem;
+}
+
+.reset-tailwind h2 {
+  font-size: 1.25rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.reset-tailwind h3 {
+  font-size: 1.125rem;
+  margin: 0.75rem 0 0.5rem;
+}
+
+.reset-tailwind p {
+  margin: 0.5rem 0;
+}
+
+.reset-tailwind ul,
+.reset-tailwind ol {
+  margin: 0.75rem;
+}
+
+.reset-tailwind li {
+  margin-bottom: 0.25rem;
+}
+
+.reset-tailwind a {
+  color: #2f70fd;
+  text-decoration: underline;
+}
+
+.reset-tailwind code {
+  background: #f4f4f4;
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+  font-family: monospace;
+  font-size: 0.95em;
+}
