@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_study_users",
+  "info": {
+    "singularName": "case-study-user",
+    "pluralName": "case-study-users",
+    "displayName": "Case Study User"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "email": {
+      "type": "email"
+    },
+    "name": {
+      "type": "string"
+    },
+    "position": {
+      "type": "string"
+    },
+    "case_studies": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::case-study.case-study",
+      "mappedBy": "case_study_user"
+    },
+    "profile_pic": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    }
+  }
+}
