@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_add_component_use_cases",
+  "info": {
+    "displayName": "use_cases",
+    "icon": "bell"
+  },
+  "options": {},
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "sub_title": {
+      "type": "component",
+      "component": "component.sub-title",
+      "repeatable": false
+    }
+  },
+  "config": {}
+}

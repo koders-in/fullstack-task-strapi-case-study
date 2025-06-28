@@ -1,0 +1,63 @@
+{
+  "kind": "collectionType",
+  "collectionName": "case_studies",
+  "info": {
+    "singularName": "case-study",
+    "pluralName": "case-studies",
+    "displayName": "case-study"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "titile": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "uid"
+    },
+    "body_content": {
+      "type": "blocks"
+    },
+    "excerpt": {
+      "type": "blocks"
+    },
+    "testimonial_text": {
+      "type": "string"
+    },
+    "testimonial_author_name": {
+      "type": "string"
+    },
+    "testimonial_author_position": {
+      "type": "string"
+    },
+    "author_avatar": {
+      "type": "media",
+      "multiple": true,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "categories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case-study.case-study",
+      "inversedBy": "case_studies"
+    },
+    "company": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::case-study.case-study"
+    },
+    "case_studies": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::case-study.case-study",
+      "mappedBy": "categories"
+    }
+  }
+}

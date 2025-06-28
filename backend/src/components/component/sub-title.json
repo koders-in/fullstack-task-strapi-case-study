@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_component_sub_titles",
+  "info": {
+    "displayName": "subTitle"
+  },
+  "options": {},
+  "attributes": {
+    "sub1": {
+      "type": "string"
+    },
+    "sub2": {
+      "type": "string"
+    },
+    "sub3": {
+      "type": "string"
+    }
+  },
+  "config": {}
+}
