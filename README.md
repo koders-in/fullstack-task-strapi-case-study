@@ -1,98 +1,121 @@
-# 🚀 Full Stack Intern Task: CMS-Driven Case Studies with Strapi
+📌 Project Title
 
-## 📌 Task Title:
-**CMS Integration — Strapi Setup + Case Studies Management (Full Stack Task)**
+CMS Integration with Strapi – Case Studies Management (Internship Task)
 
----
+📖 About the Project
 
-## 📝 Task Description:
-You are required to set up **Strapi** as a **Headless CMS** and build a **CMS-powered Case Studies section** using **React with Vite + Tailwind CSS** for the frontend. This includes:
+This project is a full stack implementation demonstrating integration between a CMS (Strapi) and a React-based frontend for dynamically managing and displaying case studies. This task was part of my internship assignment provided by the company, where I was responsible for both backend setup and frontend development.
 
-- The **Case Studies section on the homepage**
-- The **Case Study detail/read page**
+⚙️ Backend Setup (Strapi CMS)
 
-The layout should **exactly match the attached screenshots**.
+Installed and Configured Strapi:
 
-All content (titles, descriptions, images, categories, tags, etc.) should be managed dynamically via Strapi and rendered through API calls on the frontend.
+Initialized a Strapi project using the official CLI.
 
-🖼️ **Design Reference:** See the attached screenshots:
-- ![Case Studies Preview](./Case Studies - Home.png)
-- ![Case Studies Details](./Case Studies - Read.png)
+Set up local development environment with appropriate database (SQLite by default).
 
----
+Created Collection Types & Components:
 
-## ✅ Task Requirements:
+Built a collection type called case-study.
 
-### 🔧 Backend (Strapi):
-- Install and configure **Strapi v4** (locally or hosted).
-- Create appropriate **content types** for managing all fields used in the screenshots:
-  - Title
-  - Description
-  - Category
-  - Tags
-  - Company Info (Logo, Name, Industry, etc.)
-  - Image Assets
-  - Testimonials (if applicable)
-- Add sample content (minimum 2–3 case studies).
-- Enable CORS and public API access for the frontend to fetch data.
+Inside this, structured multiple custom components and fields such as:
 
-### 💻 Frontend (React + Vite + Tailwind):
-- Use **React + Vite** as the framework.
-- Use **Tailwind CSS** for styling.
-- Build the **Case Studies section on the home page** and the **Case Study detail/read page**.
-- Ensure pixel-perfect implementation — spacing, fonts, layout, tags, and icons must match the screenshots.
-- Case study data should be **fetched from Strapi** (not hardcoded).
-- Ensure the components are **responsive** and **reusable**.
+Title, Slug, Excerpt, Tags
 
----
+Card Image, Conclusion, Publisher Info
 
-## 📁 Folder/Code Structure Guidelines:
-```bash
-backend/             # Strapi project files
-frontend/
-├── src/
-│   ├── assets/
-│   ├── components/
-│   ├── pages/
-│   ├── App.jsx
-│   ├── main.jsx
-│   └── index.css
-```
+Company Info (Logo, Name, About, Size, Industry, HQ, Founded Year)
 
----
+Massive Use Cases (List)
 
-## 🔍 Evaluation Criteria:
-- 🔹 Pixel-perfect implementation of the layout
-- 🔹 Clean and modular code (both frontend and backend)
-- 🔹 Proper integration of dynamic content via Strapi
-- 🔹 Responsive layout
-- 🔹 Reusable components and maintainable structure
+Key Features (List)
 
----
+Contact Section (with headings/subheadings/content)
 
-## 📦 Deliverables:
-1. Create a **new branch** in this repository.
-2. Push both the `frontend` and `backend` folders to your branch.
-3. **Create a Pull Request (PR)** to the `main` branch in this same repo with:
-   - Your **Full Name**
-   - Your **Role** (e.g., *Full Stack Intern*)
-   - A short description of what you have implemented
-   - Screenshots or Loom video (optional but appreciated)
+Made Sample Entries:
 
-**Example PR Title:**  
-`[Full Stack Intern] Case Studies Home + Read Page - Jane Doe`
+Entered multiple sample case studies with full data to test frontend rendering.
 
----
+Enabled CORS in Middleware:
 
-## 🕒 Timeline:
-- ⏰ **3 Days**
-- Complete the **Case Studies section (home + read)** with pixel-perfect accuracy
+Edited ./config/middlewares.js to enable cross-origin access:
 
----
+module.exports = [
+  'strapi::errors',
+  {
+    name: 'strapi::cors',
+    config: {
+      origin: ['http://localhost:5173'], 
+    },
+  },
+  // other middleware...
+];
 
-## 🚫 Common Mistakes to Avoid:
-- Hardcoding instead of using CMS data
-- Inconsistent fonts, colors, or padding
-- Poor folder/component structure
-- Ignoring responsiveness or accessibility
-- Failing to replicate layout exactly from screenshots
+Started Backend Server:
+
+Ran Strapi on http://localhost:1337/admin.
+
+🌐 Frontend Setup (React)
+
+Initialized React App:
+
+Used Vite + Tailwind CSS for a fast and styled frontend.
+
+Structured the layout for listing and detailing case studies.
+
+Fetched Data Using Axios:
+
+Installed axios and made GET requests to Strapi’s API.
+
+Dynamically displayed content like case study cards, brand info, quotes, and more.
+
+Responsive Design & Components:
+
+Created reusable UI components for sections like:
+
+Case Study Card
+
+Brand Info Sidebar
+
+Company Features & Use Cases
+
+Contact Section
+
+Deployed on Localhost:
+
+Backend served on http://localhost:1337
+
+Frontend served on http://localhost:5173
+
+🎥 ![Demo Video](./rec.mp4)
+
+
+
+
+🛠️ Tech Stack
+
+Frontend: React, Vite, Tailwind CSS, Axios
+
+Backend: Strapi CMS
+
+Database: SQLite (default from Strapi)
+
+📦 Installation & Usage
+
+# Backend (Strapi)
+cd strapi-backend
+npm install
+npm run develop
+
+# Frontend (React)
+cd case-study-frontend
+npm install
+npm run dev
+
+📌 Notes
+
+Ensure CORS is properly set in Strapi when working across different ports.
+
+All API requests must point to the correct Strapi base URL.
+
+Make sure to publish the case studies in Strapi for them to be available via API.
